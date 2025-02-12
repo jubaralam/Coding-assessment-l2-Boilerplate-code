@@ -1,22 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="//marmeto.com/cdn/shop/files/favicon_52x32.png?v=1644448186"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Marmeto - Shopping Cart</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="logo">
+        <img
+          src="https://marmeto.com/cdn/shop/files/re-black-logo.png?v=1716890348&width=250"
+          alt="Marmeto Logo"
+        />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./pages/shop.html">Shop</a></li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="user-icons">
+        <ul>
+          <li><img src="./assets/search-interface-symbol.png" alt="Search" loading="lazy" /></li>
+          <li><img src="./assets/wishlist.png" alt="Wishlist" loading="lazy" /></li>
+          <li><img src="./assets/shopping-cart.png" alt="Cart" loading="lazy" /></li>
+        </ul>
+      </div>
+    </nav>
 
-</head>
+    <main>
+      <!-- Header -->
+      <header class="header-container">
+        <img
+          src="https://marmeto.com/cdn/shop/files/favicon_52x32.png?v=1644448186"
+          alt="Marmeto Logo"
+          loading="lazy"
+        />
+        <h4>Cart</h4>
+        <p>Home > Cart</p>
+      </header>
 
-<body>
-    <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
-    </div>
-    <!-- Happy coding 😊 -->
+      <!-- Cart Section -->
+      <section class="data-container">
+        <aside>
+          <table>
+            <thead class="table-head">
+              <tr>
+                <th colspan="2">Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <!-- Table data will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </aside>
+
+        <!-- Cart Totals -->
+        <div class="cart-totals">
+          <h2>Cart Totals</h2>
+          <div>
+            <h4 id="total">Total</h4>
+          </div>
+          <div class="btn-container">
+            <button aria-label="Place Order">Place Order</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <div>
+          <img src="./assets/success.png" alt="High Quality" loading="lazy" />
+        </div>
+        <div>
+          <h2>High Quality</h2>
+          <p>Crafted from top materials</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="./assets/verify.png" alt="Warranty Protection" loading="lazy" />
+        </div>
+        <div>
+          <h2>Warranty Protection</h2>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="./assets/handle-with-care.png" alt="Free Shipping" loading="lazy" />
+        </div>
+        <div>
+          <h2>Free Shipping</h2>
+          <p>Order over $150</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="./assets/support.png" alt="24/7 Support" loading="lazy" />
+        </div>
+        <div>
+          <h2>24/7 Support</h2>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>

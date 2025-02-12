@@ -4,28 +4,26 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
+  background-color: rgb(229, 229, 229);
+  box-sizing: border-box;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
-}
+
 a {
   display: inline-block;
-  color: lightgrey;
+  color: rgb(0, 0, 0);
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   white-space: nowrap;
   padding: 12px;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 20px;
   text-decoration: none;
   transition: all 0.15s ease-in-out;
 }
 
 a:hover {
-  background: rgba(0, 0, 0, 0.23);
+  background: rgba(0, 0, 0, 0.461);
   color: white;
   transform: scale(1.03);
   text-decoration: none;
@@ -33,4 +31,341 @@ a:hover {
 a:active {
   transform: scale(0.98);
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  background-color: white;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul li {
+  list-style: none;
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+.logo img {
+  width: 100%;
+}
+
+.user-icons ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.user-icons ul li {
+  list-style: none;
+}
+.user-icons ul li img {
+  width: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.header-container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Ensure text remains visible */
+  z-index: 1;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.landmarkshops.in/cdn-cgi/image/h=300,w=1980,q=85,fit=cover/homecentre/1000014086535-1000014086535-2410_01-2100.jpg")
+    no-repeat center center/cover;
+  opacity: 7;
+  z-index: -1;
+}
+.header-container img,
+h4,
+p {
+  color: rgb(0, 0, 0);
+
+  margin: 0;
+  padding: 5px 5px;
+}
+.header-container h4 {
+  font-size: 2rem;
+}
+.data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  max-width: 1080px;
+  margin: 50px auto;
+}
+.data-container > aside {
+  width: 100%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding: 12px 10px;
+  text-align: left;
+  background-color: rgba(249, 241, 231);
+}
+.table-head tr td {
+  column-span: 2;
+}
+.table-body tr td img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.cart-totals {
+  width: 300px;
+  padding: 10px 20px;
+  background-color: rgb(249, 241, 231);
+  margin: 0px 20px;
+  border-radius: 5px;
+}
+.cart-totals > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  width: 300px;
+  margin: 30px 0px;
+  box-sizing: border-box;
+}
+
+.btn-container button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: blue;
+  color: white;
+  border: 2px solid rgb(171, 170, 170);
+  border-radius: 5px;
+}
+.btn-container button:hover {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: white;
+  color: blue;
+  border: 2px solid rgb(171, 170, 170);
+  border-radius: 5px;
+}
+
+/* footer design */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: 10px auto;
+  background-color: rgba(249, 241, 231);
+}
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 10px;
+  padding: 15px 5px;
+}
+footer > div > div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+footer > div > div > img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 50%;
+}
+footer > div > div > h2,
+p {
+  margin: 0 0px;
+  padding: 10px 0;
+}
+footer > div > div > p {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .data-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-totals {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-container {
+    height: 200px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .data-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+ 
+
+  .header-container h4 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  
+  table th,
+  table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .cart-totals {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+ 
+  .btn-container button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .header-container {
+    height: 200px;
+    padding: 10px;
+  }
+
+  .header-container h4 {
+    font-size: 1.3rem;
+  }
+
+  .data-container {
+    padding: 10px;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .btn-container button {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .cart-totals {
+    width: 100%;
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
 
